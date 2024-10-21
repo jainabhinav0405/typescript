@@ -43,7 +43,7 @@
 //   let x = { a: 1, b: 2, c: 3, d: 4 };
    
 //   getProperty(x, "a");
-//   getProperty(x, "m");
+//   getProperty(x, "m");//error
 
 
 
@@ -63,8 +63,8 @@
 
 
 // class Student {  
-//   Id: number;  
-//   Name: string;  
+//   id: number;  
+//   name: string;  
 
 //   constructor(id:number,  name:string) {   
 //       this.Id = id;  

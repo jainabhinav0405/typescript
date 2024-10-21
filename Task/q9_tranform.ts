@@ -1,20 +1,21 @@
-const user2 = {
+const user3 = {
     firstName: "Tony",
     lastName: "Stark",
     age: 54,
   };
   
-  type User2 = {
-    firstName: string;
-    lastName: string;
-    age: number;
-  };
-  const transformKeys = (object: User2, updateObject: Partial<User2>) => {
-    
-
-  };
-  const transformUser = transformKeys(user2, { age: 9, firstName: "rites" });
+  ;
+  function transformKeys<T extends object, U extends Partial<T>>(obj: T, updateObject: U) {
+      for (let key in obj) {
+          if (updateObject.hasOwnProperty(key)) {
+              const newKey = updateObject[key] as keyof T;
+              obj[newKey] = obj[key];
+              delete obj[key];
+          }
+      }
+      return obj;
+  }
+  const transformUser = transformKeys(user3, { firstName:"first",lastName:"last" });
   console.log(transformUser); 
-  
-
+  type NewTransformerUser = ReturnType<typeof transformKeys>;
   

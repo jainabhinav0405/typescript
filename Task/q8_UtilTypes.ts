@@ -20,7 +20,7 @@ const user2:DefinationExample= {
     name:"",
     age:null,
     address:{
-        street:"string",
+        street:null,
         city:"agra"
     }
 }

@@ -127,6 +127,8 @@
 //   phoneNumber: 1234567890,
 // };
 // console.log(t1);
+
+
 //ParameterType 
 // this help to extract the type of parameter from the functions 
 // type MyFunction = (a: string, b: number) => void;
@@ -141,6 +143,8 @@
 // const params: PersonConstructorParams = ['Alice', 30];
 // console.log(params);
 // console.log(typeof Person);
+
+
 //Return Type
 // ReturnType<Type> is a utility type in TypeScript that allows you to extract the return type of a given function type
 // function createUser(name: string, age: number) {
@@ -151,6 +155,9 @@
 // }
 // // Extracting the return type
 // type UserType = ReturnType<typeof createUser>;
+
+
+
 //InstanceType 
 // return the type of the class instance
 // class Person {
@@ -162,6 +169,7 @@
 // const person: PersonInstance = new Person('Alice', 30);
 // console.log(person.name); // Output: Alice
 // console.log(person.age);  // Output: 30
+
 //Exclude 
 // it is much simillar as Omit Type 
 //Extract

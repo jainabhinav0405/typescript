@@ -102,5 +102,4 @@
         let point: Point = { x: 10, y: 20 };
 
 */
-var str = "Abhinav";
-console.log(str);
+
