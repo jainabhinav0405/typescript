@@ -1,0 +1,216 @@
+/*
+const cube = 2
+ 
+var cube1 = 3
+ 
+const add = (a:number,b:number, ) : number=>{
+ 
+  if(a>10){
+    return a+b;
+  }
+ 
+  return +`${a} ${b}`
+}
+ 
+ 
+const sum = add(1,1)
+ 
+type Value = string
+ 
+const value:Value = 'Hello'
+const value2:Value = 'bye'
+ 
+ 
+  type NoAdd = NonNullable<Address>
+ 
+ 
+ 
+type User = {
+  name:string,
+  email:string,
+  age:number | string
+  familyMember:User
+  addresses:{
+    city:string,
+    state:string
+  }[]
+}
+ 
+type Address = User['addresses'][number]
+ 
+type ArrTupless = [string,number,User]
+type ArrI = ArrTupless[0]
+ 
+ 
+const arr = [1,2,'3'] as const
+ 
+function funN(){
+ 
+  var v1 = 1
+  var v2 = 'hello'
+ 
+  return [v2,v1] as const
+}
+ 
+interface UserI{
+  name?:string,
+}
+ 
+interface UserI{
+  ocupation?:string
+}
+ 
+const user:Required<UserI> = {
+name:'asd'
+  
+ 
+}
+ 
+const address:Address ={
+ 
+}
+ 
+type Greeting = 1 | 2
+ 
+const greet:Greeting = { name:'string'}
+ 
+ 
+var anyValue: any = '123'
+ 
+var num = 3
+ 
+ 
+function fun(greet:Greeting,name?:never,){
+ 
+  if(greet==='bye'){
+    return 'Goodbye'
+  }
+ 
+  // if(greet === 'bye'){
+  //   return 'Hi'
+  // }
+ 
+  if(greet as unknown as string === 'welcome')
+ 
+ 
+  return greet
+ 
+}
+ 
+type UserWithoutAge = Pick<User,'age'|'name'>
+ 
+ 
+// Basic
+//  - Record
+//  - Partial
+//  - Required
+//  - Omit
+//  - Pick
+// - Exclude
+//  - Extract
+//  - NonNullable
+ 
+type Multi = string | number | User
+ 
+type RemoveUser = Exclude<Multi,number>
+ 
+// type StringObj = {
+//   [key:string]:string
+// }
+type Color = 'red' | 'green' | 'black'
+type StringObj = Record<string,string>
+ 
+const obj = {
+  red:'#asdas',
+  green:'#123123',
+  black:'#123123'
+} satisfies Record<string,string>
+ 
+const blackValue = obj.brown //undfeined
+ 
+type ColorRed= 'red.100' | 'red.200' | 'red.300'
+type ColorGreen = 'green.100' | 'green.200' | 'green.300'
+type ColorYello = 'yellow.100' | 'yellow.200' | 'yellow.300' | number
+ 
+type ColorValue =ColorYello | ColorGreen |ColorYello
+ 
+ 
+type ColorWithRed = Extract<ColorValue,'yellow.400'>
+ 
+type Flag = {
+  a:boolean
+  b:never
+} | {
+  a:never
+  b:boolean
+}
+ 
+const fg:Flag = {
+  // b : true,
+  a : true
+}
+ 
+function funFlag(flag:Flag){
+ 
+}
+ 
+// both not req
+funFlag({b:true,a:false})
+ 
+ 
+// - Keyof Operator
+ 
+//   - typeof operator
+ 
+//   - Tuples
+ 
+ 
+const user1 = {
+  name:'Tony',
+  age:12
+  ad:'123'
+}
+ 
+type User1 = typeof user1
+ 
+type USerProperteis = keyof User1
+ 
+const userPr:USerProperteis = 'name'
+ 
+ 
+ 
+type UserG = {
+  name:string,
+  age:number
+}
+ 
+const userAgeNum:UserG<USerProperteis,23|25> = {
+name:'Tony',
+  prop:'',
+  age
+}
+ 
+const userAgeStg= {
+  name:'Tony',
+  age:43,
+}
+ 
+type Userrr = typeof userAgeStg
+ 
+function valueAccessPrev<T extends object>(obj:T, key:keyof T){
+    return obj[key]
+}
+ 
+function valueAccess<T extends object, K extends keyof T>(obj:T, key:K){
+    return obj[key]
+}
+ 
+const obj1 = {
+  a:1,
+  b:'bye'
+}
+ 
+const nameOrAgePre = valueAccessPrev(userAgeStg,'age')
+const nameOrAge = valueAccess(userAgeStg,'age')
+ 
+*/
