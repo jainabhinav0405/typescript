@@ -3,12 +3,12 @@ type User3 = {
     name: string;
   };
   
-  const user = {
+  const user5 = {
     id: 1,
     name: "Alice",
 
   } satisfies User3; 
-  console.log(user);
+  console.log(user5);
   
 
 let x: unknown = 'hello';

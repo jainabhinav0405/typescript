@@ -24,3 +24,21 @@ const user2:DefinationExample= {
         city:"agra"
     }
 }
+
+
+type UserType = {
+    USER : 'user',
+    ADMIN : 'admin',
+    COMPANY: 'company'
+
+}
+
+type UserTypeDefinition<T extends UserType> = {
+    [key in keyof T]: key extends T[key] ? never : T[key]
+}
+
+const arr:UserTypeDefinition<UserType>={
+    USER:"user",
+    ADMIN:"admin",
+    COMPANY:"company"
+}

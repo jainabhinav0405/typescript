@@ -21,7 +21,6 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 function mergeUserPurchases(users, purchases, key) {
-    // Create a mapping of user purchases
     var purchaseMap = {};
     purchases.forEach(function (purchase) {
         var userId = purchase.userId, rest = __rest(purchase, ["userId"]);
@@ -33,17 +32,24 @@ function mergeUserPurchases(users, purchases, key) {
     return users.map(function (user) { return (__assign(__assign({}, user), { purchases: purchaseMap[user.id] || [] })); });
 }
 var users = [
-    { id: 1, name: "John Doe", email: "john@example.com" },
+    { id: 1, name: "John Doe", email: "john@example.com", dob: '12-2-03' },
     { id: 2, name: "Jane Smith", email: "jane@example.com" },
     { id: 3, name: "Jim Brown", email: "jim@example.com" },
 ];
+var userReviews = [
+    { userId: 1, review: "Not good", star: 1200 },
+    { userId: 2, review: "Bad", star: 800 },
+    { userId: 1, review: "Average", star: 20 },
+    { userId: 3, review: "Excellent", star: 100 },
+    { userId: 2, review: "Poor", star: 200 },
+];
 var purchases = [
-    { userId: 1, item: "Laptop", price: 1200 },
+    { userId: 1, item: "Laptop", price: 1200, category: 'cellphone' },
     { userId: 2, item: "Phone", price: 800 },
     { userId: 1, item: "Mouse", price: 20 },
     { userId: 3, item: "Keyboard", price: 100 },
     { userId: 2, item: "Monitor", price: 200 },
 ];
-// Merging users with purchases
-var mergedData = mergeUserPurchases(users, purchases, 'purchase');
-console.log(JSON.stringify(mergedData, null, 2));
+var mergedData = mergeUserPurchases(users, purchases, "purchase");
+var mergedData2 = mergeUserPurchases(users, userReviews, 'review');
+console.log(JSON.stringify(mergedData2, null, 2));

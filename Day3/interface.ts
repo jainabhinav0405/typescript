@@ -136,17 +136,17 @@
 ////////////////////////////////////////////////////////////////////
 
 
-class User{
-    private name="kjm";
-    age=12;
-    printName=()=>{
-        console.log(this.name);
-    }
-}
+// class User{
+//     private name="kjm";
+//     age=12;
+//     printName=()=>{
+//         console.log(this.name);
+//     }
+// }
 
-interface assd extends User{
-    system:string;
-}
+// interface assd extends User{
+//     system:string;
+// }
 
 // const value: assd={
 //     name:"ayush",
@@ -157,10 +157,10 @@ interface assd extends User{
 // }
 
 
-class asd extends User implements assd{
-    age =12;
-    system = "windows";
-    printName=()=>{
-        console.log();
-    }
-}
+// class asd extends User implements assd{
+//     age =12;
+//     system = "windows";
+//     printName=()=>{
+//         console.log();
+//     }
+// }

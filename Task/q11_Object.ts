@@ -1,8 +1,8 @@
-function deepGet(obj:Object, sum:string = " ") {
+function deepGet(obj:Object, prefix:string = " ") {
         return Object.keys(obj).reduce((acc, key) => {
-            const newKey = sum ? `${sum}.${key}` : key;
-            if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
-                Object.assign(acc, deepGet(obj[key], newKey));
+            const newKey = prefix ? `${prefix}.${key}` : key;
+            if (typeof obj[key] === 'object' && obj[key] !== null ) {
+                Object.assign(acc, deepGet(obj[key], key));
             } else {
                 acc[newKey] = obj[key];
             }
@@ -10,6 +10,6 @@ function deepGet(obj:Object, sum:string = " ") {
         }, {});
       }
 
-// Example usage:
 const obj = { foo: { bar: { baz: 'Hello' } } };
-const value1 = deepGet(obj, 'foo.bar.baz'); // 'Hello'
+const value1 = deepGet(obj, 'foo.bar.baz');
+console.log(value1);

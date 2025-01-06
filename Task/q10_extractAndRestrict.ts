@@ -27,6 +27,9 @@ const componentOption = {
         image: "/assets/headerV2.png",
         variant: "HeaderV2",
       },
+      {
+
+      }
     ],
   } as const;
   
@@ -34,11 +37,13 @@ const componentOption = {
   
   type Variant<T> = T extends { variant: infer V } ? V : never;
 
-//   const variant:Variant<componentOption> = 
   type AllVariants = Variant<ComponentOption[keyof ComponentOption][number]>;
   
   type HeaderVariants = Extract<AllVariants, `HeaderV${number}`>;
+  type ButtonVariants = Extract<AllVariants, `ButtonV${number}`>;
   
   const headerVariant: HeaderVariants = "HeaderV1"
+  const buttomVariant: ButtonVariants = "ButtonV1"
+
   console.log(headerVariant); 
   

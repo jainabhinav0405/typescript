@@ -14,11 +14,11 @@ function deepMerge(obj1, obj2) {
     }
     return obj1;
 }
-var obj1 = { a: 1, b: { c: 2 } };
-var obj2 = { b: { d: 3 }, e: 4 };
-var merged = deepMerge(obj1, obj2);
-console.log(merged);
 var obj3 = { a: 1, b: { c: 2 } };
-var obj4 = { b: { c: 'string' }, d: 4 }; // This will cause a type error
-var merged2 = deepMerge(obj3, obj4); // Type error if obj3.b.c and obj4.b.c are not the same primitive type
+var obj4 = { b: { d: 3 }, e: 4 };
+var merged = deepMerge(obj3, obj4);
+console.log(merged);
+var obj5 = { a: 1, b: { c: 2 } };
+var obj6 = { b: { c: 'string' }, d: 4 };
+var merged2 = deepMerge(obj5, obj6);
 console.log(merged2);

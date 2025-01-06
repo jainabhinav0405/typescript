@@ -10,15 +10,15 @@ interface User {
 type DefinedProperties<T> = {
     [K in keyof T]:T[K] extends Object?
     DefinedProperties<T[K]> :
-    Exclude<T[K], null | undefined>;
+    Exclude<T[K], null|undefined>
 }
 
-type DefineExample = DefinedProperties<User>;
+type DefineExample = DefinedProperties<User extends [infer U]?U: User>;
 
 const user: DefineExample = {
     name:"",
     address:{
-        street:"",
+        street:"null",
         city:"agra"
     }
 }

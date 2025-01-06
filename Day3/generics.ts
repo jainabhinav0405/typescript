@@ -71,6 +71,7 @@
 //       this.Name = name;  
 //   }  
 // }  
+//
 // function display<T extends Student>(per: T): void {  
 //   console.log(`${ per.Id} ${per.Name}` );  
 // }  

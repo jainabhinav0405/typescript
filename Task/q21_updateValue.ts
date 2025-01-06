@@ -1,5 +1,5 @@
 function updateValuesWithPrefix<T extends object>(obj: T, prefix: string): T {
-    const updatedObj: any = {};
+    const updatedObj:any = {}  ;
   
     for (const key in obj) {
       
@@ -18,7 +18,7 @@ function updateValuesWithPrefix<T extends object>(obj: T, prefix: string): T {
     return updatedObj as T;
   }
   
-  const obj = {
+  const obj1 = {
     name: "Alice",
     age: 30,
     address: {
@@ -37,4 +37,3 @@ function updateValuesWithPrefix<T extends object>(obj: T, prefix: string): T {
   console.log(updatedObj);
   
 
-  

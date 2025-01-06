@@ -1,12 +1,12 @@
-function mapObject<T extends Record<string, any>, U>(
+function mapObject<T extends Record<string, any>, U extends Function>(
     obj: T,
-    callback: any
+    callback: U
   ){
     const result = {} as { [K in keyof T]: U };
   
     for (const key in obj) {
       if (obj.hasOwnProperty(key)) {
-        result[key] = callback(obj[key], key); 
+        result[key] = callback(obj[key]); 
       }
     }
   

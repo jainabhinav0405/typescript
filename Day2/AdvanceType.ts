@@ -44,12 +44,12 @@ function checkMethods(ele: string|number[]){
 /*
 Type:
     1.  if there is 2 type of same name, this will thrown an error 
-    2. for merging we use union and intersecion    
+    2. for merging we use union and intersection    
     3. we can merge types and interface.
-    4. Can direstly represnt the Primitive
+    4. Can directly represent the Primitive
 
 interface:
-    1. if there is 2 interface of same name, it will indiresctly auto merge 
+    1. if there is 2 interface of same name, it will ind1q  directly auto merge 
     2. this only extends property and don't have choices such as union & intersection
     3. we can't merge types and interface.
     4.  Cannot directly represent primitives or tuples

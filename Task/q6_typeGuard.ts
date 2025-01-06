@@ -5,9 +5,10 @@ function isDog<T>(value: T): boolean{
   return value instanceof Dog;
 }
 
-function filterDogs(array: (Dog|Cat)[]): Dog[]{
+function filterDogs(array: (Dog|Cat)[]){
   return array.filter(array => isDog(array));
 }
 
 const animals = [new Dog(), new Cat(), new Dog()];
-console.log(filterDogs(animals));
+const fil = filterDogs(animals)
+console.log();
